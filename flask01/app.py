@@ -1,6 +1,7 @@
 from flask import Flask
 
-app = Flask(_name_)
+app = Flask(__name__)
+
 @app.route('/')
 def hola_mundo():
     return "hola mundo"
@@ -21,6 +22,5 @@ def algo():
 def xml():
     return '<nombre>john</nombre>'
 
-if _name== "main_":
-    app.run(host='0.0.0.0',
-debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True)
